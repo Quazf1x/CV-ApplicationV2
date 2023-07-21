@@ -49,6 +49,8 @@ section {
 
 .top-border {
   border-top: 2px solid var(--black);
+  margin: .5rem 0;
+  padding: .5rem 0;
 }
 
 /*Preview Section*/

@@ -8,7 +8,7 @@ function PreviewSection() {
     <section>
       <GeneralInfo/>
       <Contacts/>
-      <Attribute isOutlined={false}/>
+      <Attribute isOutlined={true}/>
     </section>
   )
 }

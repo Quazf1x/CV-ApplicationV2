@@ -1,8 +1,8 @@
 // import React, { Component } from "react";
 
-function Attribute() {
+function Attribute({isOutlined = false}) {
   return(
-    <div>
+    <div className={isOutlined ? 'top-border' : null}>
       hiiii
     </div>
   )
