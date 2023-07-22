@@ -3,6 +3,8 @@
 :root {
   --border-color: #000000;
   --black: #000000;
+  --background:#f6f6f7;
+  --white:#ffffff;
 }
 
 *, *::after, *::before {
@@ -30,15 +32,21 @@ img {
 
 .App {
   display: grid;
-  gap: 2rem;
-  grid-template: 1fr / 1fr 1fr;
-  padding: 1rem;
+  background-color: var(--background);
+  gap: 1rem;
+  grid-template: 1fr / 1fr 1.2fr .2fr;
+  padding: 1rem 2rem;
 }
 
 section {
-  border: 1px solid var(--border-color);
+  /* border: 1px solid var(--border-color); */
   border-radius: .5rem;
-  padding: 1rem;
+  box-shadow: 0 0 5px #00000044;
+  padding: 1.5rem;
+}
+
+section:nth-child(even) {
+  background-color: var(--white);
 }
 
 .bold-horizontal {
