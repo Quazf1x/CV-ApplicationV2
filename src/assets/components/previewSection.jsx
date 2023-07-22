@@ -5,7 +5,7 @@ import Attribute from "./previewComponents/attributes";
 
 function PreviewSection() {
   return(
-    <section>
+    <section className="pretty-background">
       <GeneralInfo/>
       <Contacts/>
       <Attribute isOutlined={false} name='Skills'/>

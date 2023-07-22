@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import ButtonArea from "./inputComponents/buttonArea";
 
 function InputSection() {
   return(
-    <section>hiii</section>
+    <section>
+      <ButtonArea/>
+    </section>
   )
 }
 

@@ -5,6 +5,7 @@
   --black: #000000;
   --background:#f6f6f7;
   --white:#ffffff;
+  --red:#ed4747;
 }
 
 *, *::after, *::before {
@@ -38,16 +39,17 @@ img {
   padding: 1rem 2rem;
 }
 
-section {
-  /* border: 1px solid var(--border-color); */
+
+.pretty-background {
+  background-color: var(--white);
   border-radius: .5rem;
   box-shadow: 0 0 5px #00000044;
+}
+
+section {
   padding: 1.5rem;
 }
 
-section:nth-child(even) {
-  background-color: var(--white);
-}
 
 .bold-horizontal {
   background-color: var(--black);
@@ -57,6 +59,32 @@ section:nth-child(even) {
 
 .top-border {
   border-top: 2px solid var(--black);
+}
+
+/*Input Section*/
+
+.button-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.3rem .5rem;
+}
+
+.button-section > button {
+  padding: .8rem 1.7rem;
+  border-radius: .3rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+.button-section > button > i {
+  padding: 0 .3rem;
+}
+
+.delete-btn {
+  background-color: var(--red);
+  color: var(--white);
 }
 
 /*Preview Section*/
