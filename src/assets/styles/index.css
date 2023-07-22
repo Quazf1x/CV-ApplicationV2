@@ -1,7 +1,7 @@
 /*General css*/
 
 :root {
-  --border-color: #5391e2;
+  --border-color: #000000;
   --black: #000000;
 }
 
@@ -49,8 +49,6 @@ section {
 
 .top-border {
   border-top: 2px solid var(--black);
-  margin: .5rem 0;
-  padding: .5rem 0;
 }
 
 /*Preview Section*/
@@ -95,4 +93,20 @@ section {
   display: flex;
   justify-content: space-between;
   width: 70%;
+}
+
+.attribute-list {
+  align-items: center;
+  display: flex;
+  padding: 2rem 0;
+}
+
+.attribute-list > h2 {
+  width: 33%;
+}
+
+.attribute-list > ul {
+  list-style: square;
+  font-weight: 300;
+  font-size: .9rem;
 }

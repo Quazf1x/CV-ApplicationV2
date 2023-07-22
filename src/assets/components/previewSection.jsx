@@ -8,7 +8,11 @@ function PreviewSection() {
     <section>
       <GeneralInfo/>
       <Contacts/>
-      <Attribute isOutlined={true}/>
+      <Attribute isOutlined={false} name='Skills'/>
+      <Attribute isOutlined={true} name='Objective'/>
+      <Attribute isOutlined={true} name='Education'/>
+      <Attribute isOutlined={true} name='Work Experience'/>
+      <Attribute isOutlined={true} name='Qualifications'/>
     </section>
   )
 }
