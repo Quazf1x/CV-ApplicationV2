@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 function ButtonArea() {
   return(
-    <div className="button-section input-area pretty-background">
+    <div className="button-section input-section-padding pretty-background">
       <button>Load Template</button>
       <button>
       <i className="fa-solid fa-file-arrow-down"></i>

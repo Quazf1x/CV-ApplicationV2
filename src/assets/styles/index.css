@@ -6,6 +6,7 @@
   --background:#f6f6f7;
   --white:#ffffff;
   --red:#ed4747;
+  --green:#72e172;
 }
 
 *, *::after, *::before {
@@ -63,10 +64,17 @@ section {
 
 /*Input Section*/
 
+.input-section-padding {
+  padding: 1.3rem 1rem;
+}
+
+#input-section > div {
+  margin-bottom: 1.5rem;
+}
+
 .button-section {
   display: flex;
   justify-content: space-around;
-  padding: 1.3rem .5rem;
 }
 
 .button-section > button {
@@ -85,6 +93,31 @@ section {
 .delete-btn {
   background-color: var(--red);
   color: var(--white);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin: .5rem 0;
+}
+
+.input-container > label {
+  margin-bottom: .5rem;
+  
+}
+
+.input-container > input {
+  background-color: var(--background);
+  border-radius: 1rem;
+  border: 2px solid var(--background);
+  font-size: 1rem;
+  padding: .75rem .5rem;
+  transition: all .25s;
+}
+
+.input-container > input:focus {
+  outline: none;
+  border: 2px solid var(--green);
 }
 
 /*Preview Section*/

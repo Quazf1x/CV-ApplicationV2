@@ -5,7 +5,6 @@ function Contacts(){
     <div className="preview-contacts light-font">
       <div>
         <p className="preview-street"> 956, 31st Street </p>
-        <p className="preview-zipcode"> NYC - 10001 </p>
         <p className="preview-country"> United States </p>
       </div>
       <div>
