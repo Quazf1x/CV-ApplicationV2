@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-function Contacts(){
+function Contacts({infoState}){
   return(
     <div className="preview-contacts light-font">
       <div>
-        <p className="preview-street"> 956, 31st Street </p>
-        <p className="preview-country"> United States </p>
+        <p className="preview-street"> {infoState.adress} </p>
+        <p className="preview-country"> {infoState.country} </p>
       </div>
       <div>
-        <p className="preview-website"> google.com </p>
-        <p className="preview-phone"> (123) 848 888 </p>
+        <p className="preview-website"> {infoState.website} </p>
+        <p className="preview-phone"> {infoState.phoneNumber} </p>
       </div>
     </div>
   )

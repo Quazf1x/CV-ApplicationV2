@@ -7,23 +7,28 @@ import Attribute from "./assets/components/previewComponents/attributes";
 
 function App() {
   const [personalInfo, changePersonalInfo] = useState({
-    fullName: '',
-    email: '',
-    adress: '',
-    country: '',
-    website: '',
-    phoneNumber: ''
+    fullName: 'John Smith',
+    email: 'youremail@mail.com',
+    adress: '956, 31st Street',
+    country: 'United States',
+    website: 'yourwebsite.com',
+    phoneNumber: '(123) 456 789'
   });
+
+  const handlePersonalInfo = (e) => {
+    const key = e.target.dataset.key;
+    changePersonalInfo({...personalInfo, [key]: e.target.value});
+  }
 
   return (
     <div className="App">
       <section id='input-section'>
         <ButtonArea/>
-        <PersonalInfo/>
+        <PersonalInfo handleChange={handlePersonalInfo}/>
       </section>
       <section className="pretty-background">
-        <GeneralInfo/>
-        <Contacts/>
+        <GeneralInfo infoState={personalInfo} />
+        <Contacts infoState={personalInfo} />
         <Attribute isOutlined={false} name='Skills'/>
         <Attribute isOutlined={true} name='Objective'/>
         <Attribute isOutlined={true} name='Education'/>
