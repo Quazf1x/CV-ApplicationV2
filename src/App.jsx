@@ -5,6 +5,7 @@ import GeneralInfo from "./assets/components/previewComponents/generalInfo";
 import Contacts from "./assets/components/previewComponents/contacts";
 import Attribute from "./assets/components/previewComponents/attributes";
 import MiscInfo from "./assets/components/inputComponents/miscInfo";
+import EducationInfo from "./assets/components/inputComponents/educationInfo";
 
 function App() {
   const [personalInfo, changePersonalInfo] = useState({
@@ -17,8 +18,8 @@ function App() {
   });
 
   const [miscInfo, changeMiscInfo] = useState({
-    skills: '',
-    objective: ''
+    skills: 'JavaScript, Python, HTML5/CSS...',
+    objective: 'To land a job in a...'
   })
 
   const handlePersonalInfo = (e) => {
@@ -37,6 +38,7 @@ function App() {
         <ButtonArea/>
         <PersonalInfo handleChange={handlePersonalInfo}/>
         <MiscInfo handleChange={handleMiscInfo}/>
+        <EducationInfo/>
       </section>
       <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />

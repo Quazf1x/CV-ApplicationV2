@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import InputField from "./inputField";
-import TextArea from "./textAreaField";
+import TextArea from "./re-usables/textAreaField";
 
 function MiscInfo({handleChange}) {
   return(

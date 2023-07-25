@@ -19,6 +19,10 @@ html, body {
   font-family: 'Lato', sans-serif;;
 }
 
+textarea, input {
+  font-family: monospace;
+}
+
 img {
   height: 100%;
   width: 100%;
@@ -124,6 +128,7 @@ section {
 /*Preview Section*/
 
 #preview-section {
+  align-self:start;
   width: clamp(450px, 100%, 700px);
 }
 

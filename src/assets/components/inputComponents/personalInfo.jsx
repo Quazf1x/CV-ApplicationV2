@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import InputField from "./inputField";
+import InputField from "./re-usables/inputField";
 
 function PersonalInfo({handleChange}) {
  
