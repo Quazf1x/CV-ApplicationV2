@@ -36,7 +36,7 @@ img {
   display: grid;
   background-color: var(--background);
   gap: 1rem;
-  grid-template: 1fr / 1fr  1.2fr;
+  grid-template: 1fr  / 1fr  1.2fr;
   padding: 1svw 1.5svw;
 }
 
@@ -107,7 +107,7 @@ section {
   
 }
 
-.input-container > input {
+.input-container > input, .input-container > textarea {
   background-color: var(--background);
   border-radius: 1rem;
   border: 2px solid var(--background);
@@ -116,7 +116,7 @@ section {
   transition: all .25s;
 }
 
-.input-container > input:focus {
+.input-container > input:focus, .input-container > textarea:focus {
   outline: none;
   border: 2px solid var(--green);
 }

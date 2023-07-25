@@ -16,9 +16,20 @@ function App() {
     phoneNumber: '(123) 456 789'
   });
 
+  const [miscInfo, changeMiscInfo] = useState({
+    skills: '',
+    objective: ''
+  })
+
   const handlePersonalInfo = (e) => {
     const key = e.target.dataset.key;
     changePersonalInfo({...personalInfo, [key]: e.target.value});
+  }
+
+  const handleMiscInfo = (e) => {
+    const key = e.target.dataset.key;
+    console.log(e.target.dataset.key)
+    changeMiscInfo({...miscInfo, [key]: e.target.value});
   }
 
   return (
@@ -26,16 +37,16 @@ function App() {
       <section id='input-section'>
         <ButtonArea/>
         <PersonalInfo handleChange={handlePersonalInfo}/>
-        <MiscInfo/>
+        <MiscInfo handleChange={handleMiscInfo}/>
       </section>
       <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />
         <Contacts infoState={personalInfo} />
-        <Attribute isOutlined={false} name='Skills'/>
-        <Attribute isOutlined={true} name='Objective'/>
-        <Attribute isOutlined={true} name='Education'/>
-        <Attribute isOutlined={true} name='Work Experience'/>
-        <Attribute isOutlined={true} name='Qualifications'/>
+        <Attribute isOutlined={false} name='Skills' dataKey="skills" infoState={miscInfo}/>
+        <Attribute isOutlined={true} name='Objective' infoState={miscInfo}/>
+        <Attribute isOutlined={true} name='Education' type="list"/>
+        <Attribute isOutlined={true} name='Work Experience' type="list"/>
+        <Attribute isOutlined={true} name='Qualifications' type="list"/>
     </section>
     </div>
   );
