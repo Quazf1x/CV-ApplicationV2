@@ -28,7 +28,6 @@ function App() {
 
   const handleMiscInfo = (e) => {
     const key = e.target.dataset.key;
-    console.log(e.target.dataset.key)
     changeMiscInfo({...miscInfo, [key]: e.target.value});
   }
 
@@ -43,7 +42,7 @@ function App() {
         <GeneralInfo infoState={personalInfo} />
         <Contacts infoState={personalInfo} />
         <Attribute isOutlined={false} name='Skills' dataKey="skills" infoState={miscInfo}/>
-        <Attribute isOutlined={true} name='Objective' infoState={miscInfo}/>
+        <Attribute isOutlined={true} name='Objective' dataKey="objective" infoState={miscInfo}/>
         <Attribute isOutlined={true} name='Education' type="list"/>
         <Attribute isOutlined={true} name='Work Experience' type="list"/>
         <Attribute isOutlined={true} name='Qualifications' type="list"/>

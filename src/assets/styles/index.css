@@ -176,13 +176,21 @@ section {
   align-items: center;
   display: flex;
   padding: 2rem 0;
+  white-space: normal;
+  word-break: break-word;
 }
 
-.attribute-list > h2 {
-  width: 33%;
+.attribute-name {
+  width: 38%;
 }
 
-.attribute-list > ul {
+.text-area-div {
+  width: 100%;
+}
+
+.attribute-ul-list {
+  width: 100%;
+  margin-left: 5rem;
   list-style: square;
   font-weight: 300;
   font-size: .9rem;
