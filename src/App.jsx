@@ -4,6 +4,7 @@ import PersonalInfo from "./assets/components/inputComponents/personalInfo";
 import GeneralInfo from "./assets/components/previewComponents/generalInfo";
 import Contacts from "./assets/components/previewComponents/contacts";
 import Attribute from "./assets/components/previewComponents/attributes";
+import MiscInfo from "./assets/components/inputComponents/miscInfo";
 
 function App() {
   const [personalInfo, changePersonalInfo] = useState({
@@ -25,8 +26,9 @@ function App() {
       <section id='input-section'>
         <ButtonArea/>
         <PersonalInfo handleChange={handlePersonalInfo}/>
+        <MiscInfo/>
       </section>
-      <section className="pretty-background">
+      <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />
         <Contacts infoState={personalInfo} />
         <Attribute isOutlined={false} name='Skills'/>
