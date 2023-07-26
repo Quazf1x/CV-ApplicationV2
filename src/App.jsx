@@ -5,7 +5,7 @@ import GeneralInfo from "./assets/components/previewComponents/generalInfo";
 import Contacts from "./assets/components/previewComponents/contacts";
 import Attribute from "./assets/components/previewComponents/attributes";
 import MiscInfo from "./assets/components/inputComponents/miscInfo";
-import EducationInfo from "./assets/components/inputComponents/educationInfo";
+import EducationInfo from "./assets/components/inputComponents/education/educationInfo";
 
 function App() {
   const [personalInfo, changePersonalInfo] = useState({
@@ -20,7 +20,15 @@ function App() {
   const [miscInfo, changeMiscInfo] = useState({
     skills: 'JavaScript, Python, HTML5/CSS...',
     objective: 'To land a job in a...'
-  })
+  });
+
+  const [education, changeEducation] = useState({
+    name: '',
+    university: '',
+    startDate: '',
+    endDate: '',
+    contry: ''
+  });
 
   const handlePersonalInfo = (e) => {
     const key = e.target.dataset.key;

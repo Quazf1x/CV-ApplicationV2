@@ -66,6 +66,10 @@ section {
   border-top: 2px solid var(--black);
 }
 
+.top-margin {
+  margin-top: 2rem;
+}
+
 /*Input Section*/
 
 .input-section-padding {
@@ -81,7 +85,7 @@ section {
   justify-content: space-around;
 }
 
-.button-section > button {
+.button-template {
   height: 2.5rem;
   width: clamp(100px, 30%, 180px);
   border-radius: .3rem;
@@ -91,7 +95,7 @@ section {
   font-size: .9rem;
 }
 
-.button-section > button > i {
+.button-template > i {
   padding: 0 .3rem;
 }
 
@@ -100,10 +104,25 @@ section {
   color: var(--white);
 }
 
+#education-form > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#cancel-education-btn {
+  background-color: var(--red);
+  color: var(--background);
+}
+
+#save-education-btn {
+  background-color: var(--green);
+  color: var(--background);
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
-  margin: .5rem 0;
+  margin: .5rem;
 }
 
 .input-container > label {
@@ -125,7 +144,15 @@ section {
   border: 2px solid var(--green);
 }
 
+.align-center-btn {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
 /*Preview Section*/
+
 
 #preview-section {
   align-self:start;
