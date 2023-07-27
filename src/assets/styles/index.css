@@ -141,6 +141,7 @@ section {
   font-size: 1rem;
   padding: .75rem .5rem;
   transition: all .25s;
+  width: 100%;
 }
 
 .input-container > input:focus, .input-container > textarea:focus {
@@ -216,18 +217,28 @@ section {
   word-break: break-word;
 }
 
+.attribute-list > div {
+  width: 100%;
+}
+
 .attribute-name {
-  width: 38%;
+  width: 33%;
 }
 
 .text-area-div {
   width: 100%;
 }
 
-.attribute-ul-list {
-  width: 100%;
-  margin-left: 5rem;
-  list-style: square;
-  font-weight: 300;
+.attribute-headline-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   font-size: .9rem;
+  font-weight: 700;
+}
+
+.attribute-headline-row ~ p {
+  font-size: .9rem;
+  font-weight: 300;
+  margin: .5rem 0;
 }

@@ -8,10 +8,10 @@ function Attribute({isOutlined = false, name, dataKey, infoState, type = 'text'}
     </div> 
     : 
     <div>
-      <div>
+      <div className="attribute-headline-row">
         <h2>Computer Science</h2>
         <p>
-          <span>Sep 1989</span> — <span>Sep 1992</span>
+          <span>Sep 1989 — Sep 1992</span>
         </p>
       </div>
       <p>
