@@ -40,7 +40,7 @@ img {
   display: grid;
   background-color: var(--background);
   gap: 1rem;
-  grid-template: 1fr  / 1fr  1.2fr;
+  grid-template: 120svh  / 1fr  1.2fr;
   padding: 1svw 1.5svw;
 }
 
@@ -71,6 +71,10 @@ section {
 }
 
 /*Input Section*/
+
+#input-section {
+  overflow-y: scroll;
+}
 
 .input-section-padding {
   padding: 1.3rem 1rem;
