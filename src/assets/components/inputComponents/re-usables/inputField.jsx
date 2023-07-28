@@ -8,6 +8,7 @@ function InputField({id, dataKey, label, handleChange, placeholder, maxLength = 
     <input 
     maxLength={maxLength}
     id={id}
+    name={dataKey}
     data-key={dataKey}
     onChange={handleChange}
     placeholder={placeholder}/>

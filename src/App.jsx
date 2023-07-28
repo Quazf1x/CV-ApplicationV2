@@ -1,4 +1,5 @@
 import React, { Component, useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import ButtonArea from "./assets/components/inputComponents/buttonArea";
 import PersonalInfo from "./assets/components/inputComponents/personalInfo";
 import GeneralInfo from "./assets/components/previewComponents/generalInfo";
@@ -22,13 +23,18 @@ function App() {
     objective: 'To land a job in a...'
   });
 
-  const [education, changeEducation] = useState({
-    name: '',
-    university: '',
-    startDate: '',
-    endDate: '',
-    contry: ''
-  });
+  const [educations, changeEducations] = useState([{
+    name: 'Computer Science',
+    university: 'Columbia University',
+    startDate: 'Sep 1989',
+    endDate: 'Sep 1992',
+    contry: 'United States',
+    id: uuidv4()},
+  ]);
+
+  // const addEducation = () => {
+
+  // }
 
   const handlePersonalInfo = (e) => {
     const key = e.target.dataset.key;
@@ -53,9 +59,9 @@ function App() {
         <Contacts infoState={personalInfo} />
         <Attribute isOutlined={false} name='Skills' dataKey="skills" infoState={miscInfo}/>
         <Attribute isOutlined={true} name='Objective' dataKey="objective" infoState={miscInfo}/>
-        <Attribute isOutlined={true} name='Education' type="list"/>
-        <Attribute isOutlined={true} name='Work Experience' type="list"/>
-        <Attribute isOutlined={true} name='Qualifications' type="list"/>
+        <Attribute isOutlined={true} name='Education' infoState={educations} type="list"/>
+        <Attribute isOutlined={true} name='Work Experience' infoState={educations} type="list"/>
+        <Attribute isOutlined={true} name='Qualifications' infoState={educations} type="list"/>
     </section>
     </div>
   );
