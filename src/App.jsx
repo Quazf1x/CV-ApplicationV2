@@ -52,7 +52,7 @@ function App() {
         <ButtonArea/>
         <PersonalInfo handleChange={handlePersonalInfo}/>
         <MiscInfo handleChange={handleMiscInfo}/>
-        <EducationInfo handleChange={handleNewEducation}/>
+        <EducationInfo infoState={educations} handleChange={handleNewEducation}/>
       </section>
       <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />
@@ -60,8 +60,8 @@ function App() {
         <Attribute isOutlined={false} name='Skills' dataKey="skills" infoState={miscInfo}/>
         <Attribute isOutlined={true} name='Objective' dataKey="objective" infoState={miscInfo}/>
         <Attribute isOutlined={true} name='Education' infoState={educations} type="list"/>
-        <Attribute isOutlined={true} name='Work Experience' infoState={educations} type="list"/>
-        <Attribute isOutlined={true} name='Qualifications' infoState={educations} type="list"/>
+        <Attribute isOutlined={true} name='Work Experience'  type="list"/>
+        <Attribute isOutlined={true} name='Qualifications' type="list"/>
     </section>
     </div>
   );

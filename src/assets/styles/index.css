@@ -21,6 +21,7 @@ html, body {
 
 textarea, input {
   font-family: monospace;
+  resize:vertical;
 }
 
 img {
@@ -68,6 +69,11 @@ section {
 
 .top-margin {
   margin-top: 2rem;
+}
+
+.education-input-date {
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 /*Input Section*/
@@ -156,6 +162,33 @@ section {
   padding: 1rem;
 }
 
+#education-input-div {
+  flex-direction: column;
+}
+
+.education-input-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  width: 100%;
+  margin-bottom: .5rem;
+  transition: all .2s;
+}
+
+.education-input-wrapper:hover {
+  background-color: var(--background);
+}
+
+.education-btns-wrapper > button {
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  margin: 0 .2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
 /*Preview Section*/
 
 
@@ -222,6 +255,7 @@ section {
 }
 
 .attribute-name {
+  align-self: start;
   width: 33%;
 }
 

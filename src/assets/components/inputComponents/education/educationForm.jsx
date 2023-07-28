@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import InputField from "../re-usables/inputField";
 
-function EducationForm({handleChange, handleCancel}) {
+function EducationForm({handleChange, handleClick,handleCancel}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     //creates an object from form data
     let formObject = {};
     const data = new FormData(e.target);
@@ -14,7 +13,12 @@ function EducationForm({handleChange, handleCancel}) {
       formObject[key] = value;
     }
     formObject.id = uuidv4();
+
+    //add object to the educations array 
     handleChange(formObject);
+    
+    //close form
+    handleClick();
   } 
 
   return(
