@@ -32,9 +32,9 @@ function App() {
     id: uuidv4()},
   ]);
 
-  // const addEducation = () => {
-
-  // }
+  const handleNewEducation = (educationObject) => {
+    changeEducations(educations.concat(educationObject));
+  }
 
   const handlePersonalInfo = (e) => {
     const key = e.target.dataset.key;
@@ -52,7 +52,7 @@ function App() {
         <ButtonArea/>
         <PersonalInfo handleChange={handlePersonalInfo}/>
         <MiscInfo handleChange={handleMiscInfo}/>
-        <EducationInfo/>
+        <EducationInfo handleChange={handleNewEducation}/>
       </section>
       <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />

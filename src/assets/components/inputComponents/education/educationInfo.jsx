@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 import EducationForm from "./educationForm";
 import EducationAdd from "./educationAdd";
 
-function EducationInfo() {
+function EducationInfo({handleChange}) {
   const [isForm, changeForm] = useState(false);
 
   const handleClick = () => {
@@ -13,7 +13,7 @@ function EducationInfo() {
 
     <div className="input-section-padding pretty-background">
       <h1>Education</h1>
-      {isForm ? <EducationForm handleCancel={handleClick}/> : <EducationAdd handleClick={handleClick} /> }
+      {isForm ? <EducationForm handleChange={handleChange} handleCancel={handleClick}/> : <EducationAdd handleClick={handleClick} /> }
     </div>
   )
 }
