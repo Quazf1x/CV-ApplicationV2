@@ -19,8 +19,8 @@ function App() {
   });
 
   const [miscInfo, changeMiscInfo] = useState({
-    skills: 'JavaScript, Python, HTML5/CSS...',
-    objective: 'To land a job in a...'
+    skills: '',
+    objective: ''
   });
 
   const [educations, changeEducations] = useState([{
@@ -34,6 +34,11 @@ function App() {
 
   const handleNewEducation = (educationObject) => {
     changeEducations(educations.concat(educationObject));
+  }
+
+  const removeEducation = (id) => {
+    const el = educations.find(education => education.id === id);
+    console.log(el);
   }
 
   const handlePersonalInfo = (e) => {
@@ -52,7 +57,7 @@ function App() {
         <ButtonArea/>
         <PersonalInfo handleChange={handlePersonalInfo}/>
         <MiscInfo handleChange={handleMiscInfo}/>
-        <EducationInfo infoState={educations} handleChange={handleNewEducation}/>
+        <EducationInfo infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
       </section>
       <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />

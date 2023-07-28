@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import InputField from "../re-usables/inputField";
 
-function EducationForm({handleChange, handleClick,handleCancel}) {
+function EducationForm({handleChange, handleClick, handleCancel}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
