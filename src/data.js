@@ -15,7 +15,6 @@ const data = {
     objective: 'to be a star!'
   },
 
-  sections: {
     educations: [{
       name: 'Computer Science',
       university: 'Columbia University',
@@ -25,6 +24,5 @@ const data = {
       id: uuidv4(),
     }]
   }
-}
 
 export { data };

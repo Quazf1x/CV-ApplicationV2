@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
+import { data } from "./data";
 import ButtonArea from "./assets/components/inputComponents/buttonArea";
 import PersonalInfo from "./assets/components/inputComponents/personalInfo";
 import GeneralInfo from "./assets/components/previewComponents/generalInfo";
@@ -9,28 +9,9 @@ import MiscInfo from "./assets/components/inputComponents/miscInfo";
 import EducationInfo from "./assets/components/inputComponents/education/educationInfo";
 
 function App() {
-  const [personalInfo, changePersonalInfo] = useState({
-    fullName: 'John Smith',
-    email: 'youremail@mail.com',
-    adress: '956, 31st Street',
-    country: 'United States',
-    website: 'yourwebsite.com',
-    phoneNumber: '(123) 456 789'
-  });
-
-  const [miscInfo, changeMiscInfo] = useState({
-    skills: '',
-    objective: ''
-  });
-
-  const [educations, changeEducations] = useState([{
-    name: 'Computer Science',
-    university: 'Columbia University',
-    startDate: 'Sep 1989',
-    endDate: 'Sep 1992',
-    contry: 'United States',
-    id: uuidv4()},
-  ]);
+  const [personalInfo, changePersonalInfo] = useState(data.personalInfo);
+  const [miscInfo, changeMiscInfo] = useState(data.miscInfo);
+  const [educations, changeEducations] = useState(data.educations);
 
   const handleNewEducation = (educationObject) => {
     changeEducations(educations.concat(educationObject));
@@ -56,8 +37,8 @@ function App() {
     <div className="App">
       <section id='input-section'>
         <ButtonArea/>
-        <PersonalInfo handleChange={handlePersonalInfo}/>
-        <MiscInfo handleChange={handleMiscInfo}/>
+        <PersonalInfo infoState={personalInfo} handleChange={handlePersonalInfo}/>
+        <MiscInfo infoState={miscInfo} handleChange={handleMiscInfo}/>
         <EducationInfo infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
       </section>
       <section id='preview-section' className='pretty-background'>

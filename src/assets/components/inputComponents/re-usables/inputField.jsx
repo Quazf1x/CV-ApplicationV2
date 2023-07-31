@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-function InputField({id, dataKey, label, handleChange, placeholder, maxLength = 23}) {
+function InputField({id, value, dataKey, label, handleChange, placeholder, maxLength = 23}) {
 
   return (
   <div className="input-container">
@@ -8,6 +8,7 @@ function InputField({id, dataKey, label, handleChange, placeholder, maxLength = 
     <input 
     maxLength={maxLength}
     id={id}
+    value={value}
     name={dataKey}
     data-key={dataKey}
     onChange={handleChange}
