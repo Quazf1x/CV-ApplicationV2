@@ -36,9 +36,10 @@ function App() {
     changeEducations(educations.concat(educationObject));
   }
 
-  const removeEducation = (id) => {
-    const el = educations.find(education => education.id === id);
-    console.log(el);
+  const removeEducation = (e) => {
+    const id = e.target.closest('.education-input-wrapper').dataset.id;
+    const newEducationList = educations.filter(education => education.id !== id);
+    changeEducations(newEducationList);
   }
 
   const handlePersonalInfo = (e) => {
