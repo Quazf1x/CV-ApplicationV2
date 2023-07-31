@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
 import { data } from "./data";
+import { inputData } from "./inputData";
 import ButtonArea from "./assets/components/inputComponents/buttonArea";
 import PersonalInfo from "./assets/components/inputComponents/personalInfo";
 import GeneralInfo from "./assets/components/previewComponents/generalInfo";
@@ -39,6 +40,7 @@ function App() {
         <ButtonArea/>
         <PersonalInfo infoState={personalInfo} handleChange={handlePersonalInfo}/>
         <MiscInfo infoState={miscInfo} handleChange={handleMiscInfo}/>
+        <EducationInfo inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
         <EducationInfo infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
       </section>
       <section id='preview-section' className='pretty-background'>
@@ -47,7 +49,7 @@ function App() {
         <Attribute isOutlined={false} name='Skills' dataKey="skills" infoState={miscInfo}/>
         <Attribute isOutlined={true} name='Objective' dataKey="objective" infoState={miscInfo}/>
         <Attribute isOutlined={true} name='Education' infoState={educations} type="list"/>
-        <Attribute isOutlined={true} name='Work Experience'  type="list"/>
+        <Attribute isOutlined={true} name='Work Experience' infoState={educations}  type="list"/>
         <Attribute isOutlined={true} name='Qualifications' type="list"/>
     </section>
     </div>
