@@ -21,41 +21,36 @@ function EducationForm({inputData, handleChange, handleClick, handleCancel}) {
     handleClick();
   }
 
-  const forms = inputData.map(key => {
-    const field = Array.isArray(key) ? 
-    <div key={1}>
-    {key.map(subField => {
-      return <InputField 
-      key={subField.key}
-      id={subField.id} 
-      label={subField.label} 
-      dataKey={subField.dataKey}
-      placeholder={subField.placeholder}/>
-      }
-    )}
+  //function that creates input fields from data provided
+  const forms = inputData.map((element, i) => {
+    //checking if the data element is an array
+    // if yes, it nests array elements as InputFields inside div
+    //if no, creates a single InputField element
+    const field = Array.isArray(element) ? 
+    <div key={i}>
+      {element.map(subField => {
+        return <InputField 
+          key={subField.key}
+          id={subField.id} 
+          label={subField.label} 
+          dataKey={subField.dataKey}
+          placeholder={subField.placeholder}/>
+      })}
     </div>
     : 
     <InputField 
-    key={key.key} 
-    id={key.id} 
-    label={key.label} 
-    dataKey={key.dataKey}
-    placeholder={key.placeholder}/>
+    key={element.key} 
+    id={element.id} 
+    label={element.label} 
+    dataKey={element.dataKey}
+    placeholder={element.placeholder}/>
 
   return field;
-  })
+  });
 
   return(
     <form id="education-form" onSubmit={handleSubmit}>
-      
-      {forms}
-      {/* <InputField id="education-name" dataKey="name" label="Name" placeholder="Software engineer"/>
-      <InputField id="university-name" dataKey="university" label="University" placeholder="University of Washington"/>
-      <div>
-        <InputField id="university-start" dataKey="startDate" label="Start Date" placeholder="01.01.2000"/>
-        <InputField id="university-end" dataKey="endDate" label="End Date" placeholder="01.01.2004"/>
-      </div>
-      <InputField id="university-contry" dataKey="contry" label="Contry" placeholder="United States"/> */}
+      {forms}      
       <div onClick={console.log(inputData)} className="top-margin">
         <button onClick={handleCancel} id="cancel-education-btn" className="button-template">Cancel</button>
         <button type="submit" id="save-education-btn" className="button-template">Save</button>
