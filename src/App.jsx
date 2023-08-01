@@ -38,10 +38,10 @@ function App() {
     <div className="App">
       <section id='input-section'>
         <ButtonArea/>
-        <PersonalInfo infoState={personalInfo} handleChange={handlePersonalInfo}/>
+        <PersonalInfo inputData={inputData.personalInfo} handleChange={handlePersonalInfo}/>
         <MiscInfo infoState={miscInfo} handleChange={handleMiscInfo}/>
         <EducationInfo inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
-        <EducationInfo infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
+        <EducationInfo inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
       </section>
       <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />
