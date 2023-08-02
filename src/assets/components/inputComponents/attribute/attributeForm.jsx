@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import InputsGroup from "../re-usables/inputGroup";
 
-function EducationForm({inputData, handleChange, handleClick, handleCancel}) {
+function AttributeForm({inputData, handleChange, handleClick, handleCancel}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ function EducationForm({inputData, handleChange, handleClick, handleCancel}) {
     }
     formObject.id = uuidv4();
 
-    //add object to the educations array 
+    //add object to the attribute's array 
     handleChange(formObject);
     
     //close form
@@ -23,14 +23,14 @@ function EducationForm({inputData, handleChange, handleClick, handleCancel}) {
 
   
   return(
-    <form id="education-form" onSubmit={handleSubmit}>
+    <form id="attribute-form" onSubmit={handleSubmit}>
       <InputsGroup arrayData={inputData}/>   
       <div className="top-margin">
-        <button onClick={handleCancel} id="cancel-education-btn" className="button-template">Cancel</button>
-        <button type="submit" id="save-education-btn" className="button-template">Save</button>
+        <button onClick={handleCancel} id="cancel-attribute-btn" className="button-template">Cancel</button>
+        <button type="submit" id="save-attribute-btn" className="button-template">Save</button>
       </div>
     </form>
   )
 }
 
-export default EducationForm;
+export default AttributeForm;

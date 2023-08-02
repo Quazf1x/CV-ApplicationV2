@@ -106,7 +106,7 @@ const inputData = {
   jobExperience: [
     {
       id: 'job-title',
-      dataKey: 'jobTitle',
+      dataKey: 'name',
       label: 'Job title',
       placeholder: 'UX/UI Designer',
       key: uuidv4()
@@ -123,7 +123,7 @@ const inputData = {
     [
       {
         id: 'company-start',
-        dataKey: 'companyStart',
+        dataKey: 'startDate',
         label: 'Start Date',
         placeholder: '01.01.2006',
         maxLength: 10,
@@ -132,7 +132,7 @@ const inputData = {
 
       {
         id: 'company-end',
-        dataKey: 'companyEnd',
+        dataKey: 'endDate',
         label: 'End Date',
         placeholder: '06.06.2009',
         maxLength: 10,
@@ -141,16 +141,8 @@ const inputData = {
     ],
 
     {
-      id: 'company-location',
-      dataKey: 'companyLocation',
-      label: 'Location',
-      placeholder: 'Los Angeles city, United States',
-      key: uuidv4()
-    },
-
-    {
       id: 'company-description',
-      dataKey: 'companyDescription',
+      dataKey: 'description',
       label: 'Description',
       placeholder: 'ItTech inc',
       maxLength: 100,

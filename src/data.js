@@ -18,19 +18,18 @@ const data = {
     educations: [{
       name: 'Computer Science',
       university: 'Columbia University',
-      startDate: 'Sep 1989',
-      endDate: 'Sep 1992',
+      startDate: '01.01.2000',
+      endDate: '01.01.2004',
       contry: 'United States',
       id: uuidv4(),
     }],
 
     jobExperiences: [{
-      jobTitle: 'Computer Science',
-      companyName: 'Columbia University',
-      companyStart: 'Sep 1989',
-      companyEnd: 'Sep 1992',
-      companyLocation: 'United States',
-      companyDescription: '...',
+      name: 'Computer Science',
+      companyName: 'ItTech inc',
+      startDate: '01.01.2006',
+      endDate: '03.05.2009',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       id: uuidv4(),
     }]
   }

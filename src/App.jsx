@@ -7,7 +7,7 @@ import GeneralInfo from "./assets/components/previewComponents/generalInfo";
 import Contacts from "./assets/components/previewComponents/contacts";
 import Attribute from "./assets/components/previewComponents/attributes";
 import MiscInfo from "./assets/components/inputComponents/miscInfo";
-import EducationInfo from "./assets/components/inputComponents/education/educationInfo";
+import AttributeInfo from "./assets/components/inputComponents/attribute/attributeInfo";
 
 function App() {
   const [personalInfo, changePersonalInfo] = useState(data.personalInfo);
@@ -20,7 +20,7 @@ function App() {
   }
 
   const removeEducation = (e) => {
-    const id = e.target.closest('.education-input-wrapper').dataset.id;
+    const id = e.target.closest('.attribute-input-wrapper').dataset.id;
     const newEducationList = educations.filter(education => education.id !== id);
     changeEducations(newEducationList);
   }
@@ -41,8 +41,8 @@ function App() {
         <ButtonArea/>
         <PersonalInfo inputData={inputData.personalInfo} handleChange={handlePersonalInfo}/>
         <MiscInfo handleChange={handleMiscInfo}/>
-        <EducationInfo inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
-        <EducationInfo inputData={inputData.jobExperience} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
+        <AttributeInfo inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
+        <AttributeInfo inputData={inputData.jobExperience} infoState={jobExperiences} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
       </section>
       <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />
@@ -50,7 +50,7 @@ function App() {
         <Attribute isOutlined={false} name='Skills' dataKey="skills" infoState={miscInfo}/>
         <Attribute isOutlined={true} name='Objective' dataKey="objective" infoState={miscInfo}/>
         <Attribute isOutlined={true} name='Education' infoState={educations} type="list"/>
-        <Attribute isOutlined={true} name='Work Experience' infoState={educations}  type="list"/>
+        <Attribute isOutlined={true} name='Work Experience' infoState={jobExperiences}  type="list"/>
         <Attribute isOutlined={true} name='Qualifications' type="list"/>
     </section>
     </div>

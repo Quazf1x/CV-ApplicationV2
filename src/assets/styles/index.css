@@ -71,7 +71,7 @@ section {
   margin-top: 2rem;
 }
 
-.education-input-date {
+.attribute-input-date {
   font-weight: 500;
   font-size: 1rem;
 }
@@ -114,17 +114,17 @@ section {
   color: var(--white);
 }
 
-#education-form > div {
+#attribute-form > div {
   display: flex;
   justify-content: space-between;
 }
 
-#cancel-education-btn {
+#cancel-attribute-btn {
   background-color: var(--red);
   color: var(--background);
 }
 
-#save-education-btn {
+#save-attribute-btn {
   background-color: var(--green);
   color: var(--background);
 }
@@ -162,11 +162,11 @@ section {
   padding: 1rem;
 }
 
-#education-input-div {
+#attribute-input-div {
   flex-direction: column;
 }
 
-.education-input-wrapper {
+.attribute-input-wrapper {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -176,11 +176,11 @@ section {
   transition: all .2s;
 }
 
-.education-input-wrapper:hover {
+.attribute-input-wrapper:hover {
   background-color: var(--background);
 }
 
-.education-btns-wrapper > button {
+.attribute-btns-wrapper > button {
   border: none;
   border-radius: 100%;
   cursor: pointer;

@@ -2,22 +2,22 @@
 
 function Attribute({isOutlined = false, name, dataKey, infoState, type = 'text'}) {
 
-  let renderEducations;
+  let renderAttributes;
 
   if(Array.isArray(infoState)) {
-    renderEducations = infoState.map(education => {
-    return (<div key={education.id}>
+    renderAttributes = infoState.map(attribute => {
+    return (<div key={attribute.id}>
       <div className="attribute-headline-row">
-        <h2>{education.name}</h2>
+        <h2>{attribute.name}</h2>
         <p>
-          <span>{education.startDate} — {education.endDate}</span>
+          <span>{attribute.startDate} — {attribute.endDate}</span>
         </p>
       </div>
       <p>
-      {education.university}
+      {attribute.university || attribute.companyName}
       </p>
       <p>
-      {education.contry}
+      {attribute.contry || attribute.description}
       </p>
     </div>)
     }
@@ -29,7 +29,7 @@ function Attribute({isOutlined = false, name, dataKey, infoState, type = 'text'}
     </div> 
     : 
     <div>
-      {renderEducations}
+      {renderAttributes}
     </div>;
 
   return(
