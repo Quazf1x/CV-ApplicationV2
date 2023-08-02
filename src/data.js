@@ -22,6 +22,16 @@ const data = {
       endDate: 'Sep 1992',
       contry: 'United States',
       id: uuidv4(),
+    }],
+
+    jobExperiences: [{
+      jobTitle: 'Computer Science',
+      companyName: 'Columbia University',
+      companyStart: 'Sep 1989',
+      companyEnd: 'Sep 1992',
+      companyLocation: 'United States',
+      companyDescription: '...',
+      id: uuidv4(),
     }]
   }
 

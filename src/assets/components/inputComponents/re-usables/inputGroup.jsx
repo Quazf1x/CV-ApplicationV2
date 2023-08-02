@@ -12,6 +12,7 @@ function InputsGroup({arrayData, handleChange}) {
       {element.map(subField => {
         return <InputField 
           key={subField.key}
+          maxLength={subField.maxLength}
           id={subField.id} 
           label={subField.label} 
           dataKey={subField.dataKey}
@@ -22,6 +23,7 @@ function InputsGroup({arrayData, handleChange}) {
     : 
     <InputField
     key={element.key}
+    maxLength={element.maxLength}
     id={element.id} 
     label={element.label} 
     dataKey={element.dataKey}

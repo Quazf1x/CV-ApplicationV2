@@ -13,6 +13,7 @@ function App() {
   const [personalInfo, changePersonalInfo] = useState(data.personalInfo);
   const [miscInfo, changeMiscInfo] = useState(data.miscInfo);
   const [educations, changeEducations] = useState(data.educations);
+  const [jobExperiences, changeJobExperiences] = useState(data.jobExperiences);
 
   const handleNewEducation = (educationObject) => {
     changeEducations(educations.concat(educationObject));
@@ -39,9 +40,9 @@ function App() {
       <section id='input-section'>
         <ButtonArea/>
         <PersonalInfo inputData={inputData.personalInfo} handleChange={handlePersonalInfo}/>
-        <MiscInfo infoState={miscInfo} handleChange={handleMiscInfo}/>
+        <MiscInfo handleChange={handleMiscInfo}/>
         <EducationInfo inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
-        <EducationInfo inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
+        <EducationInfo inputData={inputData.jobExperience} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
       </section>
       <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />

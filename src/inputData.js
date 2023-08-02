@@ -80,6 +80,7 @@ const inputData = {
         dataKey: 'startDate',
         label: 'Start Date',
         placeholder: '01.01.2000',
+        maxLength: 10,
         key: uuidv4()
       },
 
@@ -88,6 +89,7 @@ const inputData = {
         dataKey: 'endDate',
         label: 'End Date',
         placeholder: '01.01.2004',
+        maxLength: 10,
         key: uuidv4()
       },
     ],
@@ -99,7 +101,64 @@ const inputData = {
       placeholder: 'United States',
       key: uuidv4()
     }
+  ],
+
+  jobExperience: [
+    {
+      id: 'job-title',
+      dataKey: 'jobTitle',
+      label: 'Job title',
+      placeholder: 'UX/UI Designer',
+      key: uuidv4()
+    },
+
+    {
+      id: 'company-name',
+      dataKey: 'companyName',
+      label: 'Company Name',
+      placeholder: 'ItTech inc',
+      key: uuidv4()
+    },
+
+    [
+      {
+        id: 'company-start',
+        dataKey: 'companyStart',
+        label: 'Start Date',
+        placeholder: '01.01.2006',
+        maxLength: 10,
+        key: uuidv4()
+      },
+
+      {
+        id: 'company-end',
+        dataKey: 'companyEnd',
+        label: 'End Date',
+        placeholder: '06.06.2009',
+        maxLength: 10,
+        key: uuidv4()
+      }
+    ],
+
+    {
+      id: 'company-location',
+      dataKey: 'companyLocation',
+      label: 'Location',
+      placeholder: 'Los Angeles city, United States',
+      key: uuidv4()
+    },
+
+    {
+      id: 'company-description',
+      dataKey: 'companyDescription',
+      label: 'Description',
+      placeholder: 'ItTech inc',
+      maxLength: 100,
+      key: uuidv4()
+    }
   ]
 }
+
+
 
 export { inputData};
