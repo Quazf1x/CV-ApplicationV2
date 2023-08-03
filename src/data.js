@@ -25,7 +25,7 @@ const data = {
     }],
 
     jobExperiences: [{
-      name: 'Computer Science',
+      name: 'UI/UX Designer',
       companyName: 'ItTech inc',
       startDate: '01.01.2006',
       endDate: '03.05.2009',

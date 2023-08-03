@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-function AttributeAdd({infoState, handleRemoval, handleClick}) {
+function AttributeAdd({name, infoState, handleRemoval, handleClick}) {
 
   const existingAttributeInfo = infoState.map(attribute => {
     return(
@@ -16,7 +16,7 @@ function AttributeAdd({infoState, handleRemoval, handleClick}) {
   return(
       <div id="attribute-input-div" className="align-center-btn" >
         {existingAttributeInfo}
-        <button onClick={handleClick} className="button-template">+ Add Education</button>
+        <button onClick={handleClick} className="button-template">+ Add {name}</button>
       </div>
   )
 }

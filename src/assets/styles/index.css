@@ -97,7 +97,7 @@ section {
 
 .button-template {
   height: 2.5rem;
-  width: clamp(100px, 30%, 180px);
+  padding: 0 1vw;
   border-radius: .3rem;
   border: none;
   cursor: pointer;

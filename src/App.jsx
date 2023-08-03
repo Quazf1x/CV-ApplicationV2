@@ -15,24 +15,43 @@ function App() {
   const [educations, changeEducations] = useState(data.educations);
   const [jobExperiences, changeJobExperiences] = useState(data.jobExperiences);
 
-  const handleNewEducation = (educationObject) => {
-    changeEducations(educations.concat(educationObject));
+  const handleNewAttribute = (object, state, stateHook) => {
+    stateHook(state.concat(object));
+  }
+
+  const handleNewEducation = (object) => {
+    handleNewAttribute(object, educations, changeEducations);
+  }
+
+  const handleNewJob = (object) => {
+    handleNewAttribute(object, jobExperiences, changeJobExperiences);
+  }
+
+  const removeAttributeElement = (e, state, stateHook) => {
+    const id = e.target.closest('.attribute-input-wrapper').dataset.id;
+    const newAttributeList = state.filter(attribute => attribute.id !== id);
+    stateHook(newAttributeList);
   }
 
   const removeEducation = (e) => {
-    const id = e.target.closest('.attribute-input-wrapper').dataset.id;
-    const newEducationList = educations.filter(education => education.id !== id);
-    changeEducations(newEducationList);
+    removeAttributeElement(e, educations, changeEducations);
+  }
+
+  const removeJob = (e) => {
+    removeAttributeElement(e, jobExperiences, changeJobExperiences);
+  }
+
+  const handleInfo = (e, state, stateHook) => {
+    const key = e.target.dataset.key;
+    stateHook({...state, [key]: e.target.value});
   }
 
   const handlePersonalInfo = (e) => {
-    const key = e.target.dataset.key;
-    changePersonalInfo({...personalInfo, [key]: e.target.value});
+    handleInfo(e, personalInfo, changePersonalInfo);
   }
 
   const handleMiscInfo = (e) => {
-    const key = e.target.dataset.key;
-    changeMiscInfo({...miscInfo, [key]: e.target.value});
+    handleInfo(e, miscInfo, changeMiscInfo);
   }
 
   return (
@@ -41,8 +60,8 @@ function App() {
         <ButtonArea/>
         <PersonalInfo inputData={inputData.personalInfo} handleChange={handlePersonalInfo}/>
         <MiscInfo handleChange={handleMiscInfo}/>
-        <AttributeInfo inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
-        <AttributeInfo inputData={inputData.jobExperience} infoState={jobExperiences} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
+        <AttributeInfo name='Education' inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
+        <AttributeInfo name='Job Experience' inputData={inputData.jobExperience} infoState={jobExperiences} handleRemoval={removeJob} handleChange={handleNewJob}/>
       </section>
       <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />
