@@ -11,8 +11,8 @@ const data = {
   },
 
   miscInfo: {
-    skills: 'play, write code, etc',
-    objective: 'to be a star!'
+    skills: 'Microsoft Office, HTML, CSS, JavaScript ES6 +, React, Vue.js',
+    objective: 'To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills.'
   },
 
     educations: [{

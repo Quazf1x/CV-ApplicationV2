@@ -1,7 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import placeholderImg from '../../Img/placeholder.png';
 
 function GeneralInfo({infoState}) {
+  const [image, setImage] = useState(placeholderImg);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if(file) {
+      setImage(URL.createObjectURL(file));
+    }
+  }
+
   return(
     <div className="preview-general-info">
       <div>
@@ -13,7 +22,9 @@ function GeneralInfo({infoState}) {
         <hr className="bold-horizontal"></hr>
       </div>
       <div className="preview-img">
-        <img src={placeholderImg} alt='CV author'/>
+        <img src={image} alt='CV author'/>
+        <input onChange={handleImageChange} id='cv-avatar' type="file"/>
+        <label htmlFor='cv-avatar'>Add Image</label>
       </div>
     </div>
   )
