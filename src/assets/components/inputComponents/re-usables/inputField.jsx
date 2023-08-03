@@ -12,7 +12,8 @@ function InputField({id, value, dataKey, label, handleChange, placeholder, maxLe
     name={dataKey}
     data-key={dataKey}
     onChange={handleChange}
-    placeholder={placeholder}/>
+    placeholder={placeholder}
+    required/>
   </div>
 )
 }

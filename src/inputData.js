@@ -21,6 +21,7 @@ const inputData = {
       dataKey: 'email',
       label: 'Email',
       placeholder: 'yourmail@mail.com',
+      maxLength: 55,
       key: uuidv4()
     },
 

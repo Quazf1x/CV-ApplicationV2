@@ -15,6 +15,20 @@ function App() {
   const [educations, changeEducations] = useState(data.educations);
   const [jobExperiences, changeJobExperiences] = useState(data.jobExperiences);
 
+  const loadTemplate = () => {
+    changePersonalInfo(data.personalInfo);
+    changeMiscInfo(data.miscInfo);
+    changeEducations(data.educations);
+    changeJobExperiences(data.jobExperiences);
+  }
+
+  const clearTemplate = () => {
+    changePersonalInfo('');
+    changeMiscInfo('');
+    changeEducations([]);
+    changeJobExperiences([]);
+  }
+
   const handleNewAttribute = (object, state, stateHook) => {
     stateHook(state.concat(object));
   }
@@ -57,7 +71,7 @@ function App() {
   return (
     <div className="App">
       <section id='input-section'>
-        <ButtonArea/>
+        <ButtonArea fillResume={loadTemplate} clearResume={clearTemplate}/>
         <PersonalInfo inputData={inputData.personalInfo} handleChange={handlePersonalInfo}/>
         <MiscInfo handleChange={handleMiscInfo}/>
         <AttributeInfo name='Education' inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
@@ -70,7 +84,6 @@ function App() {
         <Attribute isOutlined={true} name='Objective' dataKey="objective" infoState={miscInfo}/>
         <Attribute isOutlined={true} name='Education' infoState={educations} type="list"/>
         <Attribute isOutlined={true} name='Work Experience' infoState={jobExperiences}  type="list"/>
-        <Attribute isOutlined={true} name='Qualifications' type="list"/>
     </section>
     </div>
   );
