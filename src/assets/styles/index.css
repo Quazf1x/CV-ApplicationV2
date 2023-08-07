@@ -304,18 +304,3 @@ section {
   font-weight: 300;
   margin: .5rem 0;
 }
-
-@media print {
-  body{
-      width: 21cm;
-      height: 29.7cm;
-      margin: 30mm 45mm 30mm 45mm; 
-      /* change the margins as you want them to be. */
- } 
-}
-
-@page {
-  size: 21cm 29.7cm;
-  margin: 30mm 45mm 30mm 45mm;
-   /* change the margins as you want them to be. */
-}

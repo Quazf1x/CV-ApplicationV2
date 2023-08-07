@@ -77,7 +77,7 @@ function App() {
         <AttributeInfo name='Education' inputData={inputData.education} infoState={educations} handleRemoval={removeEducation} handleChange={handleNewEducation}/>
         <AttributeInfo name='Job Experience' inputData={inputData.jobExperience} infoState={jobExperiences} handleRemoval={removeJob} handleChange={handleNewJob}/>
       </section>
-      <section id='preview-section' className='page pretty-background'>
+      <section id='preview-section' className='pretty-background'>
         <GeneralInfo infoState={personalInfo} />
         <Contacts infoState={personalInfo} />
         <Attribute isOutlined={false} name='Skills' dataKey="skills" infoState={miscInfo}/>
