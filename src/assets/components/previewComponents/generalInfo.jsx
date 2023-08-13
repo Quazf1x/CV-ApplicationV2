@@ -1,5 +1,5 @@
 import { useState } from "react";
-import placeholderImg from "../../Img/placeholder.png";
+import placeholderImg from "../../img/placeholder.png";
 
 function GeneralInfo({ infoState }) {
   const [image, setImage] = useState(placeholderImg);
